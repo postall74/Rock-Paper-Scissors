@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 3167858205343137268}
   - component: {fileID: 3167858205343137270}
   - component: {fileID: 3167858205343137269}
-  - component: {fileID: 3167858205343137271}
+  - component: {fileID: -4037215166345743350}
   - component: {fileID: 3167858205343137272}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3167858205343137267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 15}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -67,9 +67,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.0320518, y: 3.1, z: 1}
-  m_Center: {x: -0.005121827, y: 2.012156, z: 0.020377398}
---- !u!114 &3167858205343137271
+  m_Size: {x: 4, y: 2.9144251, z: 1}
+  m_Center: {x: -0.028607607, y: 1.3145522, z: 0.020377398}
+--- !u!114 &-4037215166345743350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,14 +78,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 3167858205343137267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 854e7696c95ac9b43bb6654f7a2b1b9a, type: 3}
+  m_Script: {fileID: 11500000, guid: 33cef8c5f359fff41a04aca809e7610a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _model: {fileID: 0}
   _pushForceToObstacle: 650
-  _pushForceToPlayer: 15
+  _pushForceToPlayerBack: 12.5
+  _pushForceToPlayerUp: 3
   _waitTime: 2
-  _animationName: 
+  _status: {fileID: 3167858205343137272}
+  _rigidbody: {fileID: 3167858205343137270}
+  _boxCollider: {fileID: 3167858205343137269}
 --- !u!114 &3167858205343137272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a535e29d1e7bbb64ea0440ed43d7741a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _condition: 1
+  _currentStatus: 0
 --- !u!1 &6538066906189016913
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +115,7 @@ GameObject:
   - component: {fileID: 6538066906189016924}
   - component: {fileID: 6538066906189016925}
   - component: {fileID: 6538066906189016914}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,8 +130,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6538066906189016913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.225, y: 2.015, z: 0}
-  m_LocalScale: {x: 0.55, y: 3, z: 0.5}
+  m_LocalPosition: {x: 1.602, y: 1.25, z: 0}
+  m_LocalScale: {x: 0.75, y: 3, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3167858205343137268}
@@ -226,7 +229,7 @@ GameObject:
   - component: {fileID: 6538066906205435937}
   - component: {fileID: 6538066906205435936}
   - component: {fileID: 6538066906205435951}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,8 +244,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6538066906205435948}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.63, y: 2.015, z: 0}
-  m_LocalScale: {x: 0.55, y: 3, z: 0.5}
+  m_LocalPosition: {x: -0.807, y: 1.25, z: 0}
+  m_LocalScale: {x: 0.75, y: 3, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3167858205343137268}
@@ -340,7 +343,7 @@ GameObject:
   - component: {fileID: 6538066907210085324}
   - component: {fileID: 6538066907210085325}
   - component: {fileID: 6538066907210085314}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,8 +358,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6538066907210085313}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.23, y: 2.015, z: 0}
-  m_LocalScale: {x: 0.55, y: 3, z: 0.5}
+  m_LocalPosition: {x: -1.588, y: 1.25, z: 0}
+  m_LocalScale: {x: 0.75, y: 3, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3167858205343137268}
@@ -454,7 +457,7 @@ GameObject:
   - component: {fileID: 6538066907239869306}
   - component: {fileID: 6538066907239869307}
   - component: {fileID: 6538066907239869300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,8 +472,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6538066907239869303}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.64, y: 2.015, z: 0}
-  m_LocalScale: {x: 0.55, y: 3, z: 0.5}
+  m_LocalPosition: {x: 0.793, y: 1.25, z: 0}
+  m_LocalScale: {x: 0.75, y: 3, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3167858205343137268}
@@ -568,7 +571,7 @@ GameObject:
   - component: {fileID: 6538066907245588209}
   - component: {fileID: 6538066907245588208}
   - component: {fileID: 6538066907245588223}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -583,8 +586,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6538066907245588220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.012310863, y: 2.015, z: 0}
-  m_LocalScale: {x: 0.55, y: 3, z: 0.5}
+  m_LocalPosition: {x: 0, y: 1.25, z: 0}
+  m_LocalScale: {x: 0.75, y: 3, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3167858205343137268}

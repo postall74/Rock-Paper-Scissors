@@ -1,0 +1,614 @@
+fileFormatVersion: 2
+guid: 9c4fa90f16a8a3b47b7c13319d454ee2
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: 6643775503606825853
+    second: Armature|Paper
+  - first:
+      74: -7390312799359479145
+    second: Armature|Scissors
+  - first:
+      74: -7551964380084998518
+    second: Armature|Run
+  - first:
+      74: 4280465048218800246
+    second: Armature|T_Pose
+  - first:
+      74: 6761229635874461450
+    second: Armature|Rock
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cartoon_Hand
+    second: {fileID: 2100000, guid: ebb14f68413b78241a905d705bab5103, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leg
+    second: {fileID: 2100000, guid: b2152efa4b7b0d64b9a343756eb091d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt
+    second: {fileID: 2100000, guid: 68c9898cecbd24b409fd5ab8797652d0, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Head' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Paper
+      takeName: Armature|Paper
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 00000000000000000100000000000000000000000100000001000000010000000100000000000000000000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/mixamorig:Hips
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.001
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.001/mixamorig:Hips.002
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.003
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.003/mixamorig:Hips.004
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.005
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.005/mixamorig:Hips.006
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.007
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.007/mixamorig:Hips.008
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.009
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.009/mixamorig:Hips.010
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:LeftUpLeg
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:RightUpLeg
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot
+        weight: 1
+      - path: Cube.001
+        weight: 1
+      maskType: 0
+      maskSource: {fileID: 31900000, guid: 2d92db61d8fa665459a51051ed01ae13, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Scissors
+      takeName: Armature|Scissors
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Run
+      takeName: Armature|Run
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/mixamorig:Hips
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.001
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.001/mixamorig:Hips.002
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.003
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.003/mixamorig:Hips.004
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.005
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.005/mixamorig:Hips.006
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.007
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.007/mixamorig:Hips.008
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.009
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.009/mixamorig:Hips.010
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:LeftUpLeg
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:RightUpLeg
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot
+        weight: 1
+      - path: Cube.001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|T_Pose
+      takeName: Armature|T_Pose
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/mixamorig:Hips
+        weight: 0
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.001
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.001/mixamorig:Hips.002
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.003
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.003/mixamorig:Hips.004
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.005
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.005/mixamorig:Hips.006
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.007
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.007/mixamorig:Hips.008
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.009
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.009/mixamorig:Hips.010
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:LeftUpLeg
+        weight: 0
+      - path: Armature/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:RightUpLeg
+        weight: 0
+      - path: Armature/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot
+        weight: 1
+      - path: Cube.001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Rock
+      takeName: Armature|Rock
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/mixamorig:Hips
+        weight: 0
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.001
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.001/mixamorig:Hips.002
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.003
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.003/mixamorig:Hips.004
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.005
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.005/mixamorig:Hips.006
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.007
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.007/mixamorig:Hips.008
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.009
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:Hips.009/mixamorig:Hips.010
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:LeftUpLeg
+        weight: 0
+      - path: Armature/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:RightUpLeg
+        weight: 0
+      - path: Armature/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg
+        weight: 1
+      - path: Armature/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot
+        weight: 1
+      - path: Cube.001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: mixamorig:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:Hips.009
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mixamorig:Hips.010
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Hand(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: Hand(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Hips
+      parentName: Armature
+      position: {x: 0.000000025431316, y: 1.0442857, z: 0.0077197244}
+      rotation: {x: -0.000000046632323, y: 0.000000018859284, z: 0.000000005587934, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftUpLeg
+      parentName: mixamorig:Hips
+      position: {x: -0.18866307, y: -0.091048814, z: -0.00087464263}
+      rotation: {x: -0.00012578024, y: 0.019140184, z: 0.9997951, w: 0.00658927}
+      scale: {x: 1, y: 1, z: 1.0000005}
+    - name: mixamorig:LeftLeg
+      parentName: mixamorig:LeftUpLeg
+      position: {x: 0.000000008951174, y: 0.41816142, z: -0.0000000032803564}
+      rotation: {x: -0.040248815, y: -0.00031324275, z: 0.007734368, w: 0.99915975}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: mixamorig:LeftFoot
+      parentName: mixamorig:LeftLeg
+      position: {x: -0.00000004282163, y: 0.3438499, z: 0.0000000050943343}
+      rotation: {x: 0.39099354, y: -0.027044194, z: 0.011494603, w: 0.91992414}
+      scale: {x: 0.9999999, y: 1.0000001, z: 0.9999999}
+    - name: mixamorig:RightUpLeg
+      parentName: mixamorig:Hips
+      position: {x: 0.18866307, y: -0.091048814, z: -0.0010072492}
+      rotation: {x: 0.0001442805, y: 0.021871999, z: 0.9997391, w: -0.0065874094}
+      scale: {x: 1.0000005, y: 1, z: 1.000001}
+    - name: mixamorig:RightLeg
+      parentName: mixamorig:RightUpLeg
+      position: {x: -0.00000003088149, y: 0.4182552, z: -4.4641182e-10}
+      rotation: {x: -0.04685498, y: 0.0003599209, z: -0.007731452, w: 0.99887174}
+      scale: {x: 1.0000007, y: 1.0000005, z: 1.0000001}
+    - name: mixamorig:RightFoot
+      parentName: mixamorig:RightLeg
+      position: {x: -0.000000004411631, y: 0.3439733, z: 0.000000022435561}
+      rotation: {x: 0.399674, y: 0.026171362, z: -0.011416623, w: 0.9162125}
+      scale: {x: 0.99999934, y: 0.9999998, z: 0.9999998}
+    - name: mixamorig:Hips.001
+      parentName: mixamorig:Hips
+      position: {x: 4.5474734e-15, y: 0.8485295, z: 0.6607696}
+      rotation: {x: 0.63580644, y: -0.00000009201157, z: -0.00000007579405, w: 0.7718486}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: mixamorig:Hips.002
+      parentName: mixamorig:Hips.001
+      position: {x: 0.000000009420616, y: 0.53799814, z: 0.0000001001358}
+      rotation: {x: 0.063777655, y: 0.004990708, z: -0.07785389, w: 0.99491024}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: mixamorig:Hips.003
+      parentName: mixamorig:Hips
+      position: {x: -0.07866114, y: 0.5217555, z: 0.7480041}
+      rotation: {x: 0.73315996, y: -0.018110836, z: 0.01659173, w: 0.6796126}
+      scale: {x: 1, y: 1, z: 0.99999976}
+    - name: mixamorig:Hips.004
+      parentName: mixamorig:Hips.003
+      position: {x: 0.0000000011920929, y: 0.53131247, z: 0.00000012721866}
+      rotation: {x: 0.037736923, y: -0.011387958, z: -0.21368574, w: 0.97610694}
+      scale: {x: 0.9999998, y: 0.99999976, z: 1.0000001}
+    - name: mixamorig:Hips.005
+      parentName: mixamorig:Hips
+      position: {x: -0.1285437, y: 0.18812087, z: 0.6852532}
+      rotation: {x: 0.7732152, y: 0.02238562, z: -0.015384347, w: 0.63356185}
+      scale: {x: 1, y: 0.99999976, z: 0.9999996}
+    - name: mixamorig:Hips.006
+      parentName: mixamorig:Hips.005
+      position: {x: 0.000000005960464, y: 0.5185737, z: 0.000000010281801}
+      rotation: {x: 0.04199311, y: -0.031790577, z: -0.2823434, w: 0.9578665}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000004}
+    - name: mixamorig:Hips.007
+      parentName: mixamorig:Hips
+      position: {x: 0.0040886486, y: -0.18072088, z: 0.63235664}
+      rotation: {x: 0.7998323, y: 0.08936261, z: -0.057150356, w: 0.5907762}
+      scale: {x: 0.99999976, y: 0.9999998, z: 0.9999997}
+    - name: mixamorig:Hips.008
+      parentName: mixamorig:Hips.007
+      position: {x: -0.0000000039488075, y: 0.42611805, z: 0.00000009497627}
+      rotation: {x: -0.016757667, y: -0.040081665, z: -0.3138576, w: 0.94847566}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000005}
+    - name: mixamorig:Hips.009
+      parentName: mixamorig:Hips
+      position: {x: 0.06045257, y: 0.9956026, z: -0.09255967}
+      rotation: {x: 0.21196498, y: 0.19289461, z: -0.08942676, w: 0.9538686}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+    - name: mixamorig:Hips.010
+      parentName: mixamorig:Hips.009
+      position: {x: 0.000000028610229, y: 0.5704756, z: -0.00000013828277}
+      rotation: {x: 0.26018167, y: 0.006278575, z: 0.011440878, w: 0.9654715}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000001}
+    - name: Cube.001
+      parentName: Hand(Clone)
+      position: {x: 0.000000014901161, y: 0.00000014901161, z: 0.000000039115548}
+      rotation: {x: 0.0000000018626634, y: -9.31319e-10, z: 4.440892e-16, w: 1}
+      scale: {x: 99.999985, y: 99.999985, z: 99.99998}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

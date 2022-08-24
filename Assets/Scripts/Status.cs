@@ -1,15 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+public enum StatusEnum
+{
+    Rock,
+    Paper,
+    Scissors
+}
 
 public class Status : MonoBehaviour
 {
-    [SerializeField] private int _condition;
+    [SerializeField] private StatusEnum _currentStatus;
 
-    public int Condition => _condition;
+    public StatusEnum CurrentStatus => _currentStatus;
 
-    public void ChangeStatus(int status)
+    public void ChangeStatus(StatusEnum status)
     {
-        _condition = status;
+        _currentStatus = status;
     }
 }
