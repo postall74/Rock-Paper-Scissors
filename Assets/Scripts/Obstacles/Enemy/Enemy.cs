@@ -12,6 +12,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Status _status;
     [SerializeField] private Animator _animator;
 
+    public Status GetStatus()
+    {
+        return _status;
+    }
+
     private void Update()
     {
         if (_status.CurrentStatus == StatusEnum.Rock)

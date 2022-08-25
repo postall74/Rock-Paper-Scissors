@@ -241,8 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58fc7b900c5c06e41967b6034d5e4ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _perfectPlatform: {fileID: 5505043328701309150}
-  _earlyPlatform: {fileID: 7558900868302614930}
+  _collider: {fileID: 7558900867751608388}
 --- !u!114 &7558900867751608386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,6 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _perfectPlatform: {fileID: 5505043328701309150}
   _latePlatform: {fileID: 7558900867751608388}
+  _collider: {fileID: 7558900868302614930}
 --- !u!114 &7558900868302614929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,6 +459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Perfect platform
       objectReference: {fileID: 0}
+    - target: {fileID: 6342970405476653483, guid: f5c18db91545bfe489a2a74879f5c38c, type: 3}
+      propertyPath: _collider
+      value: 
+      objectReference: {fileID: 5505043328701309150}
     - target: {fileID: 6342970405476653483, guid: f5c18db91545bfe489a2a74879f5c38c, type: 3}
       propertyPath: _latePlatform
       value: 

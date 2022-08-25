@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a535e29d1e7bbb64ea0440ed43d7741a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentStatus: 0
+  _currentStatus: 1
 --- !u!114 &1353246469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +210,10 @@ MonoBehaviour:
   _player: {fileID: 6914466487135413578}
   _playerStatusHandler: {fileID: 0}
   _eventsHandler: {fileID: 0}
+  _mover: {fileID: 0}
+  _rigidbody: {fileID: 0}
+  _pushForceToPlayer: 15
+  _pushForceToPlayerUp: 3
 --- !u!1001 &1619380481836562874
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,12 +1,12 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class LatePlatform : MonoBehaviour
 {
-    [SerializeField] private Collider _perfectPlatform;
-    [SerializeField] private Collider _earlyPlatform;
+    [SerializeField] private Collider _collider;
 
     public void DisableCollider()
     {
-        gameObject.GetComponent<Collider>().enabled = false;
+        _collider.enabled = false;
     }
 }

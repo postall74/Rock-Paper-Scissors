@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Obi;
 
+[RequireComponent(typeof(Status))]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(BoxCollider))]
 public class ObstacleScissors : Obstacle
 {
-    [Header("Player model")]
-    [SerializeField] private GameObject _model;
     [Header("Repulse")]
     [SerializeField] private float _pushForceToObstacle = 650f;
-    [SerializeField] private float _pushForceToPlayerBack = 12.5f;
-    [SerializeField] private float _pushForceToPlayerUp = 3f;
     [SerializeField] private float _waitTime;
     [Header("Object information")]
     [SerializeField] private Status _status;
@@ -22,28 +21,19 @@ public class ObstacleScissors : Obstacle
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.TryGetComponent(out Player player))
+        if (collision.collider.TryGetComponent(out Player player) && player.TryGetComponent(out StatusHandler playerCurrentStatus))
         {
-            if (player.TryGetComponent(out StatusHandler playerCurrentStatus))
+            if (_status.CurrentStatus == playerCurrentStatus.PlayerStatus)
             {
-                if (_status.CurrentStatus != playerCurrentStatus.PlayerStatus)
+                if (transform.TryGetComponent(out _rope))
                 {
-                    player.GetComponent<Rigidbody>().AddForce(Vector3.back * _pushForceToPlayerBack, ForceMode.VelocityChange);
-                    player.GetComponent<Rigidbody>().AddForce(Vector3.up * _pushForceToPlayerUp, ForceMode.VelocityChange);
-                }
-                else
-                {
-                    if (transform.TryGetComponent(out _rope))
-                    {
-                        StartCoroutine(RopeBroke());
-                    }
-
-                    if (transform.TryGetComponent(out _cloth))
-                    {
-                        StartCoroutine(ClothBroke());
-                    }
+                    StartCoroutine(RopeBroke());
                 }
 
+                if (transform.TryGetComponent(out _cloth))
+                {
+                    StartCoroutine(ClothBroke());
+                }
             }
         }
     }

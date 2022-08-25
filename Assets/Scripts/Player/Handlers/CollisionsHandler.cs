@@ -7,6 +7,8 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Player))]
 [RequireComponent(typeof(StatusHandler))]
 [RequireComponent(typeof(EventsHandler))]
+[RequireComponent(typeof(Mover))]
+[RequireComponent(typeof(Rigidbody))]
 public class CollisionsHandler : MonoBehaviour
 {
     public UnityAction OnEarlyMessage;
@@ -20,12 +22,10 @@ public class CollisionsHandler : MonoBehaviour
     [SerializeField] private StatusHandler _playerStatusHandler;
     [SerializeField] private EventsHandler _eventsHandler;
     [SerializeField] private Mover _mover;
+    [SerializeField] private Rigidbody _rigidbody;
     [Header("Repulse")]
     [SerializeField] private float _pushForceToPlayer = 15f;
     [SerializeField] private float _pushForceToPlayerUp = 3f;
-
-
-
 
     private void OnTriggerExit(Collider other)
     {
@@ -66,16 +66,21 @@ public class CollisionsHandler : MonoBehaviour
                 latePlatform.DisableCollider();
             }
         }
-
     }
 
     private void OnCollisionEnter(Collision collision)
-    {        
-        if (collision.collider.TryGetComponent(out Enemy enemy))
+    {
+        if (collision.collider.TryGetComponent(out Obstacle obstacle) && obstacle.GetComponent<Status>().CurrentStatus != _playerStatusHandler.PlayerStatus)
+        {
+            _rigidbody.AddForce(Vector3.back * _pushForceToPlayer, ForceMode.VelocityChange);
+            _rigidbody.AddForce(Vector3.up * _pushForceToPlayerUp, ForceMode.VelocityChange);
+        }
+        else if (collision.collider.TryGetComponent(out Enemy enemy))
         {
             if (_playerStatusHandler.TryWin(_playerStatusHandler, enemy.GetComponent<Status>()))
             {
                 OnFinalPush?.Invoke();
+                _mover.SetSpeed(0);
             }
             else
             {

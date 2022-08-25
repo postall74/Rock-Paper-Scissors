@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Status))]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(BoxCollider))]
 public class ObstaclePaper : Obstacle
 {
-    [Header("Player model")]
-    [SerializeField] private GameObject _model;
     [Header("Repulse")]
     [SerializeField] private float _pushForceToObstacle = 650f;
-    [SerializeField] private float _pushForceToPlayerBack = 15f;
-    [SerializeField] private float _pushForceToPlayerUp = 2f;
     [SerializeField] private float _waitTime;
     [Header("Object information")]
     [SerializeField] private Status _status;
@@ -22,16 +21,8 @@ public class ObstaclePaper : Obstacle
         {
             if (player.TryGetComponent(out StatusHandler playerCurrentStatus))
             {
-                if (_status.CurrentStatus != playerCurrentStatus.PlayerStatus)
-                {
-                    player.GetComponent<Rigidbody>().AddForce(Vector3.back * _pushForceToPlayerBack, ForceMode.VelocityChange);
-                    player.GetComponent<Rigidbody>().AddForce(Vector3.up * _pushForceToPlayerUp, ForceMode.VelocityChange);
-                }
-                else
-                {
+                if (_status.CurrentStatus == playerCurrentStatus.PlayerStatus)
                     StartCoroutine(DoorBroke());
-                }
-
             }
         }
     }

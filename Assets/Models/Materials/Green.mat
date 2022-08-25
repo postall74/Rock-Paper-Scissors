@@ -11,9 +11,9 @@ Material:
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
   m_ValidKeywords:
   - DR_SPECULAR_ON
-  - _CELPRIMARYMODE_CURVE
   - _TEXTUREBLENDINGMODE_MULTIPLY
   m_InvalidKeywords:
+  - _CELPRIMARYMODE_NONE
   - _UNITYSHADOWMODE_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -75,7 +75,7 @@ Material:
     - _BumpScale: 1
     - _CelExtraEnabled: 0
     - _CelNumSteps: 3
-    - _CelPrimaryMode: 3
+    - _CelPrimaryMode: 0
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -84,7 +84,7 @@ Material:
     - _FlatRimLightAlign: 1
     - _FlatRimSize: 0
     - _FlatSpecularEdgeSmoothness: 1
-    - _FlatSpecularSize: 0.864
+    - _FlatSpecularSize: 0.88
     - _Flatness: 1
     - _FlatnessExtra: 1
     - _GlossMapScale: 1
@@ -115,7 +115,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _TextureBlendingMode: 0
-    - _TextureImpact: 1
+    - _TextureImpact: 0.668
     - _UVSec: 0
     - _UnityShadowMode: 0
     - _UnityShadowPower: 0.2
@@ -123,7 +123,7 @@ Material:
     - _VertexColorsEnabled: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.6875113, g: 1, b: 0, a: 1}
     - _ColorDim: {r: 0.41568628, g: 0.9137255, b: 0.38431373, a: 1}
     - _ColorDimCurve: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDimExtra: {r: 0.51107824, g: 0.8962264, b: 0.063412234, a: 1}

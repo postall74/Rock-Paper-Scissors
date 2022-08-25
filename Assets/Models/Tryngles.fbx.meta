@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Braun gradient
-    second: {fileID: 2100000, guid: b06046a40673f214fa95cb18439bed6a, type: 2}
+    second: {fileID: 2100000, guid: e39c6e64228790447a8e9227e28ae270, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
