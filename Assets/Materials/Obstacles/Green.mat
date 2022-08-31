@@ -10,16 +10,12 @@ Material:
   m_Name: Green
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
   m_ValidKeywords:
-  - DR_CEL_EXTRA_ON
-  - DR_SPECULAR_ON
-  - _CELPRIMARYMODE_CURVE
+  - _CELPRIMARYMODE_SINGLE
   - _TEXTUREBLENDINGMODE_MULTIPLY
   m_InvalidKeywords:
-  - _EMISSION
-  - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   - _UNITYSHADOWMODE_NONE
-  m_LightmapFlags: 2
-  m_EnableInstancingVariants: 1
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -56,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bb20145cf163e354580fefc4323f15f4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5cb48013dea37a646912d80aeec11bd4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -76,28 +72,28 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
-    - _CelExtraEnabled: 1
+    - _CelExtraEnabled: 0
     - _CelNumSteps: 3
-    - _CelPrimaryMode: 3
+    - _CelPrimaryMode: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FlatRimEdgeSmoothness: 1
-    - _FlatRimLightAlign: 1
-    - _FlatRimSize: 0.5
+    - _FlatRimEdgeSmoothness: 0
+    - _FlatRimLightAlign: 0
+    - _FlatRimSize: 0
     - _FlatSpecularEdgeSmoothness: 1
-    - _FlatSpecularSize: 0.78
-    - _Flatness: 0.66
-    - _FlatnessExtra: 0
-    - _GlossMapScale: 0
-    - _Glossiness: 0.373
+    - _FlatSpecularSize: 0.88
+    - _Flatness: 0.809
+    - _FlatnessExtra: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _GradientAngle: 280
+    - _GradientAngle: 0
     - _GradientCenterX: 0
-    - _GradientCenterY: 1
+    - _GradientCenterY: 0
     - _GradientEnabled: 0
-    - _GradientSize: 7.75
+    - _GradientSize: 0
     - _LightContribution: 0
     - _LightmapDirectionPitch: 0
     - _LightmapDirectionYaw: 0
@@ -108,17 +104,17 @@ Material:
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _RimEnabled: 0
-    - _SelfShadingSize: 0.61
-    - _SelfShadingSizeExtra: 0.1
-    - _ShadowEdgeSize: 0.332
-    - _ShadowEdgeSizeExtra: 0.5
-    - _SmoothnessTextureChannel: 1
-    - _SpecularEnabled: 1
+    - _SelfShadingSize: 0.683
+    - _SelfShadingSizeExtra: 0.75
+    - _ShadowEdgeSize: 0.102
+    - _ShadowEdgeSizeExtra: 0.249
+    - _SmoothnessTextureChannel: 0
+    - _SpecularEnabled: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
     - _TextureBlendingMode: 0
-    - _TextureImpact: 1
+    - _TextureImpact: 0.839
     - _UVSec: 0
     - _UnityShadowMode: 0
     - _UnityShadowPower: 0.2
@@ -126,15 +122,15 @@ Material:
     - _VertexColorsEnabled: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorDim: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.54901963, g: 0.7372549, b: 0, a: 1}
+    - _ColorDim: {r: 0.8214576, g: 1, b: 0.4009434, a: 1}
     - _ColorDimCurve: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorDimExtra: {r: 0, g: 0.8156863, b: 0, a: 1}
+    - _ColorDimExtra: {r: 0.90299666, g: 1, b: 0.6745283, a: 1}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
-    - _ColorGradient: {r: 0.0009803922, g: 0.048039217, b: 0.0009803922, a: 1}
-    - _EmissionColor: {r: 0.0048992857, g: 0.7924528, b: 0, a: 1}
-    - _FlatRimColor: {r: 0.6431373, g: 1.6784314, b: 0.30588236, a: 1}
-    - _FlatSpecularColor: {r: 0.052941177, g: 0.09901961, b: 0.02254902, a: 1}
-    - _LightmapDirection: {r: -0, g: 1, b: -0, a: 0}
-    - _UnityShadowColor: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
+    - _ColorGradient: {r: 1.2529491, g: 2.7802246, b: 0.9573415, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FlatRimColor: {r: 0.9313021, g: 2.5440447, b: 0.39750698, a: 1}
+    - _FlatSpecularColor: {r: 0.85941696, g: 1, b: 0.6179246, a: 1}
+    - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
+    - _UnityShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

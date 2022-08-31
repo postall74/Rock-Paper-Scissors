@@ -81,10 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cef8c5f359fff41a04aca809e7610a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _model: {fileID: 0}
   _pushForceToObstacle: 650
-  _pushForceToPlayerBack: 12.5
-  _pushForceToPlayerUp: 3
   _waitTime: 2
   _status: {fileID: 3167858205343137272}
   _rigidbody: {fileID: 3167858205343137270}

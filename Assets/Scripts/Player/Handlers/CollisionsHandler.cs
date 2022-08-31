@@ -6,7 +6,6 @@ using UnityEngine.Events;
 
 [RequireComponent(typeof(Player))]
 [RequireComponent(typeof(StatusHandler))]
-[RequireComponent(typeof(EventsHandler))]
 [RequireComponent(typeof(Mover))]
 [RequireComponent(typeof(Rigidbody))]
 public class CollisionsHandler : MonoBehaviour
@@ -14,13 +13,11 @@ public class CollisionsHandler : MonoBehaviour
     public UnityAction OnEarlyMessage;
     public UnityAction OnPerfectMessage;
     public UnityAction OnLateMessage;
-    public UnityAction OnFailMessage;
     public UnityAction OnFinalPush;
 
     [Header("Player info")]
     [SerializeField] private Player _player;
     [SerializeField] private StatusHandler _playerStatusHandler;
-    [SerializeField] private EventsHandler _eventsHandler;
     [SerializeField] private Mover _mover;
     [SerializeField] private Rigidbody _rigidbody;
     [Header("Repulse")]
@@ -34,7 +31,6 @@ public class CollisionsHandler : MonoBehaviour
             if (earlyPlatform.GetComponent<Status>().CurrentStatus == _playerStatusHandler.PlayerStatus)
             {
                 OnEarlyMessage?.Invoke();
-                _eventsHandler.ActivateMessage(true, false, false, false);
                 earlyPlatform.DisableAllPlatformColliders();
             }
 
@@ -45,7 +41,6 @@ public class CollisionsHandler : MonoBehaviour
             if (perfectPlatform.GetComponent<Status>().CurrentStatus == _playerStatusHandler.PlayerStatus)
             {
                 OnPerfectMessage?.Invoke();
-                _eventsHandler.ActivateMessage(false, true, false, false);
                 perfectPlatform.DisableAllPlatformColliders();
             }
 
@@ -53,18 +48,8 @@ public class CollisionsHandler : MonoBehaviour
         }
         else if (other.TryGetComponent(out LatePlatform latePlatform))
         {
-            if (latePlatform.GetComponent<Status>().CurrentStatus == _playerStatusHandler.PlayerStatus)
-            {
-                OnLateMessage?.Invoke();
-                _eventsHandler.ActivateMessage(false, false, true, false);
-                latePlatform.DisableCollider();
-            }
-            else
-            {
-                OnFailMessage?.Invoke();
-                _eventsHandler.ActivateMessage(false, false, true, true);
-                latePlatform.DisableCollider();
-            }
+            OnLateMessage?.Invoke();
+            latePlatform.DisableCollider();
         }
     }
 

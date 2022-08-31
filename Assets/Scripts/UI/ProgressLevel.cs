@@ -12,17 +12,14 @@ public class ProgressLevel : MonoBehaviour
     [SerializeField] private Transform _endLevelTransform;
     [SerializeField] private Transform _playerTransform;
 
-
     private Vector3 _endLevelPosition;
     private float _fullDistance;
 
     private void Start()
     {
-
         _endLevelPosition = _endLevelTransform.position;
         _fullDistance = GetDistance();
     }
-
 
     private void Update()
     {

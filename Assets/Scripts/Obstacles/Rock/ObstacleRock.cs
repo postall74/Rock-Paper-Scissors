@@ -17,13 +17,10 @@ public class ObstacleRock : Obstacle
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.TryGetComponent(out Player player))
+        if (collision.collider.TryGetComponent(out Player player) && player.TryGetComponent(out StatusHandler playerCurrentStatus))
         {
-            if (player.TryGetComponent(out StatusHandler playerCurrentStatus))
-            {
-                if (_status.CurrentStatus == playerCurrentStatus.PlayerStatus)
-                    StartCoroutine(BlocksBroke());
-            }
+            if (_status.CurrentStatus == playerCurrentStatus.PlayerStatus)
+                StartCoroutine(BlocksBroke());
         }
     }
 
@@ -38,7 +35,7 @@ public class ObstacleRock : Obstacle
             transform.GetChild(i).GetComponent<Rigidbody>().AddForce(Vector3.forward * _pushForceToObstacle, ForceMode.Acceleration);
         }
 
-        yield return new WaitForSeconds(.05f);
+        yield return new WaitForSeconds(0.05f);
         _boxCollider.enabled = false;
 
         yield return new WaitForSeconds(_waitTime);

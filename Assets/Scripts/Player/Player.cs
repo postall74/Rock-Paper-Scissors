@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
             if (obstacle.GetComponent<Status>().CurrentStatus == gameObject.GetComponent<StatusHandler>().PlayerStatus)
             {
                 gameObject.GetComponent<StatusHandler>().ResetChangeStatus();
-                gameObject.GetComponent<EventsHandler>().ResetMessageShow();
             }
         }
     }

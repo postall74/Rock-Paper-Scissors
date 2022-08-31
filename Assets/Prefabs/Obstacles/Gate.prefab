@@ -78,11 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaef4996db4420040b87c021876f9cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _model: {fileID: 0}
   _pushForceToObstacle: 650
-  _pushForceToPlayerBack: 12.5
-  _pushForceToPlayerUp: 3
-  _waitTime: 2
+  _waitTime: 1
   _status: {fileID: 6961132707816589664}
   _rigidbody: {fileID: 6961132707816589670}
   _boxCollider: {fileID: 6961132707816589671}

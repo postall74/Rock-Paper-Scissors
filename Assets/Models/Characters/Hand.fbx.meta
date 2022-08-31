@@ -28,12 +28,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Leg
-    second: {fileID: 2100000, guid: b2152efa4b7b0d64b9a343756eb091d5, type: 2}
+    second: {fileID: 7494308742316480341, guid: fe476cbff9e0c924099a225c1a627ae9, type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Shirt
-    second: {fileID: 2100000, guid: 68c9898cecbd24b409fd5ab8797652d0, type: 2}
+    second: {fileID: 2100000, guid: 5dd9e36d1ba2d2e408348ed0b3d28c6e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -17,13 +17,10 @@ public class ObstaclePaper : Obstacle
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.TryGetComponent(out Player player))
+        if (collision.collider.TryGetComponent(out Player player) && player.TryGetComponent(out StatusHandler playerCurrentStatus))
         {
-            if (player.TryGetComponent(out StatusHandler playerCurrentStatus))
-            {
-                if (_status.CurrentStatus == playerCurrentStatus.PlayerStatus)
-                    StartCoroutine(DoorBroke());
-            }
+            if (_status.CurrentStatus == playerCurrentStatus.PlayerStatus)
+                StartCoroutine(DoorBroke());
         }
     }
 
