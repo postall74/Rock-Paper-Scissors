@@ -130,10 +130,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85560954c74f19e4ea0d2555cf5b899c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pushForceToObstacle: 650
+  _model: {fileID: 0}
   _status: {fileID: 4115443833086156698}
+  _animator: {fileID: 0}
+  _pushForceToEnemy: 2
+  _waitTimeEnemy: 0.5
+  _pushForceToPlayer: 2
+  _waitTimePlayer: 1
   _rigidbody: {fileID: 4115443833086156700}
   _boxCollider: {fileID: 4115443833086156688}
+  _buttonPlanel: {fileID: 0}
 --- !u!114 &4115443833086156698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,15 +181,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c4fa90f16a8a3b47b7c13319d454ee2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c4fa90f16a8a3b47b7c13319d454ee2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c4fa90f16a8a3b47b7c13319d454ee2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c4fa90f16a8a3b47b7c13319d454ee2, type: 3}
       propertyPath: m_LocalPosition.x

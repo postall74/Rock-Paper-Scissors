@@ -10,9 +10,12 @@ Material:
   m_Name: Skin
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
   m_ValidKeywords:
+  - DR_CEL_EXTRA_ON
   - DR_GRADIENT_ON
+  - DR_RIM_ON
+  - DR_SPECULAR_ON
   - _CELPRIMARYMODE_SINGLE
-  - _TEXTUREBLENDINGMODE_MULTIPLY
+  - _TEXTUREBLENDINGMODE_ADD
   m_InvalidKeywords:
   - _UNITYSHADOWMODE_NONE
   m_LightmapFlags: 4
@@ -53,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: fc44897284c2f6548bc21339fcb69396, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6deb064b33c6fcd499857623ff447013, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -73,28 +76,28 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
-    - _CelExtraEnabled: 0
+    - _CelExtraEnabled: 1
     - _CelNumSteps: 3
     - _CelPrimaryMode: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FlatRimEdgeSmoothness: 0.804
-    - _FlatRimLightAlign: 0
+    - _FlatRimEdgeSmoothness: 0
+    - _FlatRimLightAlign: 1
     - _FlatRimSize: 0
-    - _FlatSpecularEdgeSmoothness: 0.928
-    - _FlatSpecularSize: 0.601
-    - _Flatness: 1
+    - _FlatSpecularEdgeSmoothness: 1
+    - _FlatSpecularSize: 0.909
+    - _Flatness: 0.875
     - _FlatnessExtra: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _GradientAngle: 0
-    - _GradientCenterX: 0
-    - _GradientCenterY: 0
+    - _GradientCenterX: 0.61
+    - _GradientCenterY: 0.37
     - _GradientEnabled: 1
-    - _GradientSize: 10
+    - _GradientSize: 8.47
     - _LightContribution: 0
     - _LightmapDirectionPitch: 0
     - _LightmapDirectionYaw: 0
@@ -104,18 +107,18 @@ Material:
     - _OverrideLightmapDir: 0
     - _Parallax: 0.02
     - _QueueOffset: 0
-    - _RimEnabled: 0
-    - _SelfShadingSize: 0.307
-    - _SelfShadingSizeExtra: 0
-    - _ShadowEdgeSize: 0.112
-    - _ShadowEdgeSizeExtra: 0.194
+    - _RimEnabled: 1
+    - _SelfShadingSize: 1
+    - _SelfShadingSizeExtra: 0.078
+    - _ShadowEdgeSize: 0.437
+    - _ShadowEdgeSizeExtra: 0.433
     - _SmoothnessTextureChannel: 0
-    - _SpecularEnabled: 0
+    - _SpecularEnabled: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _TextureBlendingMode: 0
-    - _TextureImpact: 1
+    - _TextureBlendingMode: 1
+    - _TextureImpact: 0
     - _UVSec: 0
     - _UnityShadowMode: 0
     - _UnityShadowPower: 0
@@ -123,15 +126,15 @@ Material:
     - _VertexColorsEnabled: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.93725497, g: 0.6117647, b: 0.19215688, a: 1}
-    - _ColorDim: {r: 0.97647065, g: 0.7294118, b: 0.2392157, a: 1}
+    - _Color: {r: 0.882353, g: 0.58431375, b: 0.21176472, a: 1}
+    - _ColorDim: {r: 0.8490566, g: 0.65882355, b: 0.36078432, a: 1}
     - _ColorDimCurve: {r: 1, g: 0.8666667, b: 0, a: 1}
-    - _ColorDimExtra: {r: 0.6320754, g: 0.52261496, b: 0.09242612, a: 1}
+    - _ColorDimExtra: {r: 1, g: 0.64705884, b: 0.3411765, a: 1}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
     - _ColorGradient: {r: 4.0156865, g: 2.0078433, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FlatRimColor: {r: 3.1843138, g: 0.84705883, b: 0, a: 1}
-    - _FlatSpecularColor: {r: 2.579473, g: 1.0809221, b: 0, a: 1}
+    - _FlatRimColor: {r: 6.3686275, g: 1.7005236, b: 0, a: 1}
+    - _FlatSpecularColor: {r: 0.64486825, g: 0.27347818, b: 0, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _UnityShadowColor: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
   m_BuildTextureStacks: []

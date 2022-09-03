@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DG.Tweening;
 
 
 [RequireComponent(typeof(Player))]
@@ -22,7 +23,7 @@ public class CollisionsHandler : MonoBehaviour
     [SerializeField] private Rigidbody _rigidbody;
     [Header("Repulse")]
     [SerializeField] private float _pushForceToPlayer = 15f;
-    [SerializeField] private float _pushForceToPlayerUp = 3f;
+    [SerializeField] private float _waitTime = 3f;
 
     private void OnTriggerExit(Collider other)
     {
@@ -57,8 +58,9 @@ public class CollisionsHandler : MonoBehaviour
     {
         if (collision.collider.TryGetComponent(out Obstacle obstacle) && obstacle.GetComponent<Status>().CurrentStatus != _playerStatusHandler.PlayerStatus)
         {
-            _rigidbody.AddForce(Vector3.back * _pushForceToPlayer, ForceMode.VelocityChange);
-            _rigidbody.AddForce(Vector3.up * _pushForceToPlayerUp, ForceMode.VelocityChange);
+            //_rigidbody.AddForce(Vector3.back * _pushForceToPlayer, ForceMode.VelocityChange);
+            //_rigidbody.AddForce(Vector3.up * _pushForceToPlayerUp, ForceMode.VelocityChange);
+            transform.DOJump(transform.position - new Vector3(0, 0, 6), _pushForceToPlayer, 0, _waitTime);
         }
         else if (collision.collider.TryGetComponent(out Enemy enemy))
         {
@@ -69,8 +71,8 @@ public class CollisionsHandler : MonoBehaviour
             }
             else
             {
-                _player.GetComponent<Rigidbody>().AddForce(Vector3.back * _pushForceToPlayer, ForceMode.VelocityChange);
-                _player.GetComponent<Rigidbody>().AddForce(Vector3.up * _pushForceToPlayerUp, ForceMode.VelocityChange);
+                //_player.GetComponent<Rigidbody>().AddForce(Vector3.back * _pushForceToPlayer, ForceMode.VelocityChange);
+                //_player.GetComponent<Rigidbody>().AddForce(Vector3.up * _pushForceToPlayerUp, ForceMode.VelocityChange);
             }
         }
     }
