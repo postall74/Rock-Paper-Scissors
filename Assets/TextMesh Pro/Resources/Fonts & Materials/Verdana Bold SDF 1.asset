@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FaceTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3edf378738782924da545eb24e1af92a, type: 3}
         m_Scale: {x: 0.96, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Verdana Bold SDF
+  m_Name: Verdana Bold SDF 1
   m_EditorClassIdentifier: 
   hashCode: 2031111423
   material: {fileID: -6277332515357431590}

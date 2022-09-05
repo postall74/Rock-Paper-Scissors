@@ -133,10 +133,10 @@ MonoBehaviour:
   _model: {fileID: 0}
   _status: {fileID: 4115443833086156698}
   _animator: {fileID: 0}
-  _pushForceToEnemy: 2
-  _waitTimeEnemy: 0.5
-  _pushForceToPlayer: 2
-  _waitTimePlayer: 1
+  _jumpPower: 2
+  _duration: 0.5
+  _playerJumpPower: 2
+  _playerDuration: 1
   _rigidbody: {fileID: 4115443833086156700}
   _boxCollider: {fileID: 4115443833086156688}
   _buttonPlanel: {fileID: 0}
@@ -246,7 +246,7 @@ PrefabInstance:
     - target: {fileID: -1526964690268444965, guid: 9c4fa90f16a8a3b47b7c13319d454ee2, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: ebb14f68413b78241a905d705bab5103, type: 2}
+      objectReference: {fileID: 2100000, guid: 4055d18473a50f44e8e3915a053de7a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 9c4fa90f16a8a3b47b7c13319d454ee2, type: 3}
       propertyPath: m_Name
       value: Hand

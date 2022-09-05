@@ -22,8 +22,8 @@ public class CollisionsHandler : MonoBehaviour
     [SerializeField] private Mover _mover;
     [SerializeField] private Rigidbody _rigidbody;
     [Header("Repulse")]
-    [SerializeField] private float _pushForceToPlayer = 15f;
-    [SerializeField] private float _waitTime = 3f;
+    [SerializeField] private float _jumpPower = 3;
+    [SerializeField] private float _duration = 0.65f;
 
     private void OnTriggerExit(Collider other)
     {
@@ -58,9 +58,7 @@ public class CollisionsHandler : MonoBehaviour
     {
         if (collision.collider.TryGetComponent(out Obstacle obstacle) && obstacle.GetComponent<Status>().CurrentStatus != _playerStatusHandler.PlayerStatus)
         {
-            //_rigidbody.AddForce(Vector3.back * _pushForceToPlayer, ForceMode.VelocityChange);
-            //_rigidbody.AddForce(Vector3.up * _pushForceToPlayerUp, ForceMode.VelocityChange);
-            transform.DOJump(transform.position - new Vector3(0, 0, 6), _pushForceToPlayer, 0, _waitTime);
+            transform.DOJump(transform.position - new Vector3(0, 0, 6), _jumpPower, 0, _duration);
         }
         else if (collision.collider.TryGetComponent(out Enemy enemy))
         {
@@ -71,8 +69,7 @@ public class CollisionsHandler : MonoBehaviour
             }
             else
             {
-                //_player.GetComponent<Rigidbody>().AddForce(Vector3.back * _pushForceToPlayer, ForceMode.VelocityChange);
-                //_player.GetComponent<Rigidbody>().AddForce(Vector3.up * _pushForceToPlayerUp, ForceMode.VelocityChange);
+                transform.DOJump(transform.position - new Vector3(0, 0, 6), _jumpPower, 0, _duration);
             }
         }
     }

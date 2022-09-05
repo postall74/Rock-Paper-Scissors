@@ -9,10 +9,10 @@ using DG.Tweening;
 public class ObstacleEnemy : Enemy
 {
     [Header("Repulse")]
-    [SerializeField] private float _pushForceToEnemy = 2f;
-    [SerializeField] private float _waitTimeEnemy = 0.5f;
-    [SerializeField] private float _pushForceToPlayer = 2f;
-    [SerializeField] private float _waitTimePlayer = 1f;
+    [SerializeField] private float _jumpPower = 2f;
+    [SerializeField] private float _duration = 0.5f;
+    [SerializeField] private float _playerJumpPower = 2f;
+    [SerializeField] private float _playerDuration = 1f;
     [Header("Enemy information")]
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private BoxCollider _boxCollider;
@@ -25,19 +25,18 @@ public class ObstacleEnemy : Enemy
         {
             if (playerCurrentStatus.TryWin(playerCurrentStatus, this.GetStatus()))
             {
-                StartCoroutine(MoveOneByOne(player.GetComponent<Rigidbody>(), _rigidbody));
+                StartCoroutine(PushEnemy(player.GetComponent<Rigidbody>(), _rigidbody));
             }
         }
     }
 
-    private IEnumerator MoveOneByOne(Rigidbody player, Rigidbody enemy)
+    private IEnumerator PushEnemy(Rigidbody player, Rigidbody enemy)
     {
-        //player.AddForce(Vector3.forward * _pushForceToPlayer, ForceMode.VelocityChange);
-        //player.AddForce(Vector3.up * _pushForceToPlayerUp, ForceMode.VelocityChange);
-        player.DOJump(transform.position - new Vector3(0, 0, 3), _pushForceToPlayer, 0, _waitTimePlayer);
+        _buttonPlanel.GetComponent<Animator>().Play("Hide button panel");
+        player.DOJump(transform.position - new Vector3(0, 0, 3), _playerJumpPower, 0, _playerDuration);
         _boxCollider.enabled = false;
-        yield return new WaitForSeconds(_waitTimePlayer);
-        transform.DOJump(new Vector3(0, 0, 200), _pushForceToEnemy, 0, _waitTimeEnemy);
+        yield return new WaitForSeconds(_playerDuration);
+        transform.DOJump(new Vector3(0, 0, 200), _jumpPower, 0, _duration);
         yield return null;
     }
 }

@@ -110,7 +110,6 @@ public class EventsHandler : MonoBehaviour
     {
         _animator.SetFloat(Speed, 0);
         _animator.SetTrigger(Finish);
-
     }
 
     private void OnRockButtonClick()
