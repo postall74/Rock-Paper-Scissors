@@ -2,6 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(StatusHandler))]
 [RequireComponent(typeof(EventsHandler))]
+[RequireComponent(typeof(CollisionsHandler))]
 public class Player : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)

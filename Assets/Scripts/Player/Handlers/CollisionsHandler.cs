@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
 
-
-[RequireComponent(typeof(Player))]
 [RequireComponent(typeof(StatusHandler))]
 [RequireComponent(typeof(Mover))]
-[RequireComponent(typeof(Rigidbody))]
 public class CollisionsHandler : MonoBehaviour
 {
     public UnityAction OnEarlyMessage;
@@ -17,13 +12,12 @@ public class CollisionsHandler : MonoBehaviour
     public UnityAction OnFinalPush;
 
     [Header("Player info")]
-    [SerializeField] private Player _player;
     [SerializeField] private StatusHandler _playerStatusHandler;
     [SerializeField] private Mover _mover;
-    [SerializeField] private Rigidbody _rigidbody;
     [Header("Repulse")]
     [SerializeField] private float _jumpPower = 3;
     [SerializeField] private float _duration = 0.65f;
+    [SerializeField] private Vector3 _jumpDirection;
 
     private void OnTriggerExit(Collider other)
     {
@@ -58,7 +52,7 @@ public class CollisionsHandler : MonoBehaviour
     {
         if (collision.collider.TryGetComponent(out Obstacle obstacle) && obstacle.GetComponent<Status>().CurrentStatus != _playerStatusHandler.PlayerStatus)
         {
-            transform.DOJump(transform.position - new Vector3(0, 0, 6), _jumpPower, 0, _duration);
+            transform.DOJump(NewPositionAfterJump(transform.position, _jumpDirection), _jumpPower, 0, _duration);
         }
         else if (collision.collider.TryGetComponent(out Enemy enemy))
         {
@@ -69,8 +63,13 @@ public class CollisionsHandler : MonoBehaviour
             }
             else
             {
-                transform.DOJump(transform.position - new Vector3(0, 0, 6), _jumpPower, 0, _duration);
+                transform.DOJump(NewPositionAfterJump(transform.position, _jumpDirection), _jumpPower, 0, _duration);
             }
         }
+    }
+
+    private Vector3 NewPositionAfterJump(Vector3 currentPosition, Vector3 jumpdirection)
+    {
+        return currentPosition - jumpdirection;
     }
 }

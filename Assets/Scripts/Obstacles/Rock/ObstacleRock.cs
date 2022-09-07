@@ -33,6 +33,7 @@ public class ObstacleRock : Obstacle
             transform.GetChild(i).GetComponent<Rigidbody>().isKinematic = false;
             transform.GetChild(i).GetComponent<Rigidbody>().useGravity = true;
             transform.GetChild(i).GetComponent<Rigidbody>().AddForce(Vector3.forward * _pushForceToObstacle, ForceMode.Acceleration);
+            transform.GetChild(i).GetComponent<Rigidbody>().AddTorque(new Vector3(1, 0, 0), ForceMode.Acceleration);
         }
 
         yield return new WaitForSeconds(0.05f);

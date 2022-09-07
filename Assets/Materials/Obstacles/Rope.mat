@@ -8,15 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Rope
-  m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
-  m_ValidKeywords:
+  m_Shader: {fileID: 4800000, guid: e2b3a851457fa304ea15bac4ad6256cc, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - DR_CEL_EXTRA_ON
   - DR_SPECULAR_ON
   - _CELPRIMARYMODE_CURVE
-  - _TEXTUREBLENDINGMODE_MULTIPLY
-  m_InvalidKeywords:
-  - _EMISSION
   - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+  - _TEXTUREBLENDINGMODE_MULTIPLY
   - _UNITYSHADOWMODE_NONE
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 1
@@ -130,7 +129,7 @@ Material:
     - _Flatness: 0.66
     - _FlatnessExtra: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.306
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _GradientAngle: 321
     - _GradientCenterX: 0
@@ -142,7 +141,7 @@ Material:
     - _LightFalloffSize: 0
     - _LightmapDirectionPitch: 0
     - _LightmapDirectionYaw: 0
-    - _Metallic: 0
+    - _Metallic: 0.801
     - _Mode: 0
     - _OcclusionStrength: 1
     - _OutlineDepthOffset: 0
