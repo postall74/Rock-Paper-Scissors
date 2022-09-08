@@ -23,7 +23,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cartoon_Hand
-    second: {fileID: 2100000, guid: ebb14f68413b78241a905d705bab5103, type: 2}
+    second: {fileID: 2100000, guid: 1658f2663dc5e094d9e6a85f86286e2f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

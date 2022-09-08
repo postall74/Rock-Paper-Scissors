@@ -10,8 +10,6 @@ public class EventsHandler : MonoBehaviour
     private const string Finish = "Finish";
 
     [Header("Player Info")]
-    [SerializeField] private Player _player;
-    [SerializeField] private GameObject _model;
     [SerializeField] private Animator _animator;
     [SerializeField] private GameObject _shirt;
     [Header("Massie materials")]

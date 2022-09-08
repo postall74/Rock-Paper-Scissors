@@ -29,8 +29,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FaceTex:
-        m_Texture: {fileID: 2800000, guid: 935b2cd00981b044fbf9befabe20dfd1, type: 3}
-        m_Scale: {x: 1.21, y: 1.12}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 0.96, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: -2117722427187734064}
@@ -43,23 +43,23 @@ Material:
     m_Ints: []
     m_Floats:
     - _Ambient: 0.54
-    - _Bevel: 1
-    - _BevelClamp: 0.639
-    - _BevelOffset: -0.199
+    - _Bevel: 0.612
+    - _BevelClamp: 0
+    - _BevelOffset: 0.025
     - _BevelRoundness: 1
-    - _BevelWidth: 0.142
+    - _BevelWidth: 0.097
     - _BumpFace: 1
     - _BumpOutline: 1
     - _ColorMask: 15
     - _CullMode: 0
     - _Diffuse: 0
-    - _FaceDilate: -0.13
+    - _FaceDilate: -0.29
     - _FaceShininess: 0
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
-    - _GlowInner: 0.521
-    - _GlowOffset: 1
-    - _GlowOuter: 0
+    - _GlowInner: 1
+    - _GlowOffset: -1
+    - _GlowOuter: 1
     - _GlowPower: 0
     - _GradientScale: 6
     - _LightAngle: 0
@@ -69,16 +69,16 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.1
+    - _OutlineWidth: 0.104
     - _Padding: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 7.12
     - _ScaleRatioA: 0.8333333
-    - _ScaleRatioB: 0.78541666
-    - _ScaleRatioC: 0.78541666
+    - _ScaleRatioB: 0.91875
+    - _ScaleRatioC: 0.91875
     - _ScaleX: 1
     - _ScaleY: 1
-    - _ShaderFlags: 0
+    - _ShaderFlags: 1
     - _Sharpness: 0.08
     - _SpecularPower: 1.7
     - _Stencil: 0
@@ -99,8 +99,8 @@ Material:
     m_Colors:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 1.0875497, g: 1.0875497, b: 1.0875497, a: 1}
-    - _GlowColor: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
+    - _FaceColor: {r: 1.3350784, g: 1.3350784, b: 1.3350784, a: 1}
+    - _GlowColor: {r: 0.9716981, g: 0, b: 0.73253036, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectFaceColor: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
@@ -166,11 +166,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Verdana Bold SDF
+  m_Name: Verdana Bold SDF Perfect
   m_EditorClassIdentifier: 
-  hashCode: 2031111423
+  hashCode: 265296076
   material: {fileID: -6277332515357431590}
-  materialHashCode: 1133935615
+  materialHashCode: 1634020460
   m_Version: 1.1.0
   m_SourceFontFileGUID: 75977b9a5c2dc304c84bf6ed3bd7cf74
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 75977b9a5c2dc304c84bf6ed3bd7cf74, type: 3}
