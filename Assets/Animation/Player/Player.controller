@@ -250,7 +250,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Armature_Armature_Armature_Finish
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -311,19 +311,19 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: Base layer
     m_StateMachine: {fileID: 7620802256773203317}
-    m_Mask: {fileID: 31900000, guid: 22977fd21f660c84eba176495b4dfc88, type: 2}
+    m_Mask: {fileID: 31900000, guid: 2efdab8ddbb44964a97c95a18519e603, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
     m_DefaultWeight: 0
-    m_IKPass: 0
+    m_IKPass: 1
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
     m_Name: Pose Layer
     m_StateMachine: {fileID: -3851189057190602732}
-    m_Mask: {fileID: 31900000, guid: 2c9ef654977879547bf7577145a50e78, type: 2}
+    m_Mask: {fileID: 31900000, guid: e92672edcb1af434198e98cc90954f16, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
@@ -528,7 +528,7 @@ AnimatorStateMachine:
     m_Position: {x: 290, y: -20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1911755958827634597}
-    m_Position: {x: 560, y: -20, z: 0}
+    m_Position: {x: 570, y: -20, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

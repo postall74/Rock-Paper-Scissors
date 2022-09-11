@@ -35,7 +35,7 @@ public class ObstacleEnemy : Enemy
         player.DOJump(transform.position - new Vector3(0, 0, 3), _playerJumpPower, 0, _playerDuration);
         _boxCollider.enabled = false;
         yield return new WaitForSeconds(_playerDuration);
-        transform.DOJump(new Vector3(0, 0, 200), _jumpPower, 0, _duration);
+        transform.DOJump(transform.position + new Vector3(0, 0, 60), _jumpPower, 0, _duration);
         yield return null;
     }
 }

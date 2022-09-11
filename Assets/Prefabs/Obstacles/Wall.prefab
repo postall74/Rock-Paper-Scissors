@@ -67,8 +67,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 4.67866, z: 1}
-  m_Center: {x: -0.02860756, y: 1.4463997, z: 0.020377398}
+  m_Size: {x: 4, y: 4.663792, z: 1}
+  m_Center: {x: -0.02860756, y: 1.4538265, z: 0.020377398}
 --- !u!114 &-4037215166345743350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,8 +81,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cef8c5f359fff41a04aca809e7610a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pushForceToObstacle: 650
-  _waitTime: 1
+  _targetPosition: {x: 0, y: 0, z: 0}
+  _targetRotation: {x: 0, y: 0, z: 0}
+  _moveDuration: 1
+  _forceMode: 0
   _status: {fileID: 3167858205343137272}
   _rigidbody: {fileID: 3167858205343137270}
   _boxCollider: {fileID: 3167858205343137269}
