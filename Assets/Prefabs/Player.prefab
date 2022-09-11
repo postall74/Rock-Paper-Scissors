@@ -185,8 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7490888a23cdb340853e52aa1b0e12d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 6914466487135413578}
-  _model: {fileID: 1925385761136084203}
   _animator: {fileID: 2059747646}
   _shirt: {fileID: 7975666518724114858}
   _greenShirt:
@@ -346,7 +344,7 @@ PrefabInstance:
     - target: {fileID: -1526964690268444965, guid: 9c4fa90f16a8a3b47b7c13319d454ee2, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 4055d18473a50f44e8e3915a053de7a9, type: 2}
+      objectReference: {fileID: 2100000, guid: 1658f2663dc5e094d9e6a85f86286e2f, type: 2}
     - target: {fileID: 27464509853057186, guid: 9c4fa90f16a8a3b47b7c13319d454ee2, type: 3}
       propertyPath: m_LocalScale.y
       value: 1
@@ -436,8 +434,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925385761136084203}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a180efd960417e443822e1e948d73de3, type: 2}
+  m_Avatar: {fileID: 9000000, guid: 9c4fa90f16a8a3b47b7c13319d454ee2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 9568bf017b3edfe48a579f7ae34df7c7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
