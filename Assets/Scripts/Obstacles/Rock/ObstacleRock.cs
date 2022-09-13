@@ -17,12 +17,29 @@ public class ObstacleRock : Obstacle
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private BoxCollider _boxCollider;
 
+    private float _timerDisable = 0.05f;
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.TryGetComponent(out Player player) && player.TryGetComponent(out StatusHandler playerCurrentStatus))
         {
             if (_status.CurrentStatus == playerCurrentStatus.PlayerStatus)
             {
+                _rigidbody.isKinematic = false;
+                _rigidbody.useGravity = true;
+                _rigidbody.AddForce(_targetPosition, _forceMode);
+
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    transform.GetChild(i).GetComponent<Rigidbody>().isKinematic = false;
+                    transform.GetChild(i).GetComponent<Rigidbody>().useGravity = true;
+
+                    transform.GetChild(i).GetComponent<Rigidbody>().AddTorque(
+                            new Vector3(_targetRotation.x, Random.Range(-_targetRotation.y, _targetRotation.y), _targetRotation.z),
+                            _forceMode);
+                    transform.GetChild(i).GetComponent<Rigidbody>().AddForce(_targetPosition, _forceMode);
+                }
+
                 StartCoroutine(BlocksBroke());
             }
         }
@@ -31,22 +48,7 @@ public class ObstacleRock : Obstacle
     #region Coroutine
     private IEnumerator BlocksBroke()
     {
-        _rigidbody.isKinematic = false;
-        _rigidbody.useGravity = true;
-        _rigidbody.AddForce(_targetPosition, _forceMode);
-
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            transform.GetChild(i).GetComponent<Rigidbody>().isKinematic = false;
-            transform.GetChild(i).GetComponent<Rigidbody>().useGravity = true;
-
-            transform.GetChild(i).GetComponent<Rigidbody>().AddTorque(
-                    new Vector3(_targetRotation.x, Random.Range(-_targetRotation.y, _targetRotation.y), _targetRotation.z),
-                    _forceMode);
-            transform.GetChild(i).GetComponent<Rigidbody>().AddForce(_targetPosition, _forceMode);
-        }
-
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(_timerDisable);
         _boxCollider.enabled = false;
 
         yield return new WaitForSeconds(_moveDuration);
