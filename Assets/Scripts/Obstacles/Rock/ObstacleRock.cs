@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using UnityEngine;
 
@@ -22,7 +23,7 @@ public class ObstacleRock : Obstacle
         {
             if (_status.CurrentStatus == playerCurrentStatus.PlayerStatus)
             {
-               StartCoroutine(BlocksBroke());
+                StartCoroutine(BlocksBroke());
             }
         }
     }
@@ -32,16 +33,16 @@ public class ObstacleRock : Obstacle
     {
         _rigidbody.isKinematic = false;
         _rigidbody.useGravity = true;
-
         _rigidbody.AddForce(_targetPosition, _forceMode);
 
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<Rigidbody>().isKinematic = false;
             transform.GetChild(i).GetComponent<Rigidbody>().useGravity = true;
+
             transform.GetChild(i).GetComponent<Rigidbody>().AddTorque(
-                new Vector3(_targetRotation.x, Random.Range(-_targetRotation.y, _targetRotation.y), _targetRotation.z),
-                _forceMode);
+                    new Vector3(_targetRotation.x, Random.Range(-_targetRotation.y, _targetRotation.y), _targetRotation.z),
+                    _forceMode);
             transform.GetChild(i).GetComponent<Rigidbody>().AddForce(_targetPosition, _forceMode);
         }
 
