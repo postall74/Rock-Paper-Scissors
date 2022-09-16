@@ -96,7 +96,7 @@ Material:
     - _GradientCenterY: 4
     - _GradientEnabled: 0
     - _GradientSize: 1
-    - _LightContribution: 0
+    - _LightContribution: 0.25
     - _LightmapDirectionPitch: 3
     - _LightmapDirectionYaw: 42
     - _Metallic: 0
