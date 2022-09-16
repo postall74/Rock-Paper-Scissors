@@ -10,7 +10,7 @@ public class CameraMover : MonoBehaviour
     {
         _startPosition = transform.position;
         _startPosition.z = transform.position.z - _player.position.z;
-        _startPosition.y -= 2;
+        _startPosition.y -= _player.position.y;
     }
 
     private void LateUpdate()
