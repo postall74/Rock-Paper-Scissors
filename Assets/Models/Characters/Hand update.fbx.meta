@@ -36,6 +36,42 @@ ModelImporter:
   - first:
       74: -7390312799359479145
     second: Armature|Scissors
+  - first:
+      74: 4122851427641106113
+    second: Armature|Armature|Armature|Backed_Finish
+  - first:
+      74: -3417694287267429478
+    second: Armature|Armature|Armature|Backed_Run
+  - first:
+      74: -7690846473751844017
+    second: Armature|Armature|Armature|Backed_Run_Paper
+  - first:
+      74: 4040120727110919179
+    second: Armature|Armature|Armature|Backed_Run_Rock
+  - first:
+      74: 4855336685942628901
+    second: Armature|Armature|Armature|Backed_Run_Scissors
+  - first:
+      74: 3092231650343297877
+    second: Armature|Armature|Armature|Paper
+  - first:
+      74: 8087538939066311397
+    second: Armature|Armature|Armature|Rock
+  - first:
+      74: -1223508583214476287
+    second: Armature|Armature|Armature|Run
+  - first:
+      74: 209865726720435692
+    second: Armature|Armature|Armature|Run_Paper
+  - first:
+      74: 7491090844308808554
+    second: Armature|Armature|Armature|Run_Rock
+  - first:
+      74: 115098809069503343
+    second: Armature|Armature|Armature|Run_Scissors
+  - first:
+      74: 319632164630278438
+    second: Armature|Armature|Armature|Scissors
   externalObjects: {}
   materials:
     materialImportMode: 2
