@@ -1,43 +1,34 @@
-using DG.Tweening;
 using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Status))]
-[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider))]
 public class ObstacleRock : Obstacle
 {
+    [SerializeField] private Rigidbody[] _childObjects;
     [Header("Repulse")]
     [SerializeField] private Vector3 _targetPosition = Vector3.zero;
-    [SerializeField] private Vector3 _targetRotation = Vector3.zero;
+    [SerializeField] private float _forceTorque = 0;
     [Range(0.01f, 2.99f), SerializeField] private float _moveDuration = 1f;
     [SerializeField] private ForceMode _forceMode;
     [Header("Object information")]
     [SerializeField] private Status _status;
-    [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private BoxCollider _boxCollider;
 
-    private float _timerDisable = 0.05f;
+    private readonly float _timerDisable = 0.05f;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.TryGetComponent(out Player player) && player.TryGetComponent(out StatusHandler playerCurrentStatus))
+        if (other.TryGetComponent(out Player player) && player.TryGetComponent(out StatusHandler playerCurrentStatus))
         {
             if (_status.CurrentStatus == playerCurrentStatus.PlayerStatus)
             {
-                _rigidbody.isKinematic = false;
-                _rigidbody.useGravity = true;
-                _rigidbody.AddForce(_targetPosition, _forceMode);
-
-                for (int i = 0; i < transform.childCount; i++)
+                for (int i = 0; i < _childObjects.Length; i++)
                 {
-                    transform.GetChild(i).GetComponent<Rigidbody>().isKinematic = false;
-                    transform.GetChild(i).GetComponent<Rigidbody>().useGravity = true;
+                    _childObjects[i].isKinematic = false;
+                    _childObjects[i].AddForce(_targetPosition, _forceMode);
+                    _childObjects[i].AddRelativeTorque(transform.right * _forceTorque, _forceMode);
 
-                    transform.GetChild(i).GetComponent<Rigidbody>().AddTorque(
-                            new Vector3(_targetRotation.x, Random.Range(-_targetRotation.y, _targetRotation.y), _targetRotation.z),
-                            _forceMode);
-                    transform.GetChild(i).GetComponent<Rigidbody>().AddForce(_targetPosition, _forceMode);
                 }
 
                 StartCoroutine(BlocksBroke());
@@ -52,7 +43,12 @@ public class ObstacleRock : Obstacle
         _boxCollider.enabled = false;
 
         yield return new WaitForSeconds(_moveDuration);
-        Destroy(gameObject);
+
+        for (int i = 0; i < _childObjects.Length; i++)
+        {
+            Destroy(_childObjects[i].gameObject);
+        }
+            Destroy(gameObject);
     }
     #endregion
 }

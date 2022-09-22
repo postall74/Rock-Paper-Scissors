@@ -68,6 +68,26 @@ public class CollisionsHandler : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent(out Obstacle obstacle) && obstacle.GetComponent<Status>().CurrentStatus != _playerStatusHandler.PlayerStatus)
+        {
+            transform.DOJump(NewPositionAfterJump(transform.position, _jumpDirection), _jumpPower, 0, _duration);
+        }
+        else if (other.TryGetComponent(out Enemy enemy))
+        {
+            if (_playerStatusHandler.TryWin(_playerStatusHandler, enemy.GetComponent<Status>()))
+            {
+                OnFinalPush?.Invoke();
+                _mover.SetSpeed(0);
+            }
+            else
+            {
+                transform.DOJump(NewPositionAfterJump(transform.position, _jumpDirection), _jumpPower, 0, _duration);
+            }
+        }
+    }
+
     private Vector3 NewPositionAfterJump(Vector3 currentPosition, Vector3 jumpdirection)
     {
         return currentPosition - jumpdirection;
